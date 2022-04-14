@@ -9,78 +9,74 @@
 <body>
     <script>
 
-        // const radius = +prompt("enter a radius");
-        // const height = +prompt("enter a height");
+        
 
-        // const cylinder = {
-        //     radius: radius,
-        //     height: height,
+        const cylinder = {
+            radius: 12,
+            height: 23,
 
-        //     cylinderVolume: function() {
-        //         const cylinderVolume = Math.PI * radius * radius * height;
-        //         console.log("Volume: " + cylinderVolume);
-        //     },
+            get cylinderVolume() {
+                return Math.PI * this.radius * this.radius * this.height;
+            },
 
-        //     cylinderSquare: function() {
-        //         const cylinderSquare = Math.PI * radius * 2 * (radius + height);
-        //         console.log("Square: " + cylinderSquare);
-
-        //     }
+            get cylinderSquare() {
+                return Math.PI * this.radius * 2 * (this.radius + this.height);
+            }
             
-        // }; 
+        }; 
 
-        // cylinder.cylinderVolume(); 
-        // cylinder.cylinderSquare(); 
+        console.log("Volume: " + cylinder.cylinderVolume);
+        console.log("Square: " + cylinder.cylinderSquare) ;
 
 
 
         
         
-        // function getResult (numberOne,numberTwo,symbol) {
+        function getResult (numberOne,numberTwo,symbol) {
 
-        //      switch (symbol) {
-        //          case '+':
-        //              return numberOne + numberTwo;
-        //              break; 
-        //         case '-' :
-        //             return numberOne - numberTwo;
-        //             break;
-        //         case '*':
-        //             return numberOne * numberTwo;
-        //             break;
-        //         case '/':
-        //             return numberOne / numberTwo;
-        //             break;
-        //      }
+             switch (symbol) {
+                 case '+':
+                     return numberOne + numberTwo;
+                     break; 
+                case '-' :
+                    return numberOne - numberTwo;
+                    break;
+                case '*':
+                    return numberOne * numberTwo;
+                    break;
+                case '/':
+                    return numberOne / numberTwo;
+                    break;
+             }
 
-        // }
+        }
         
-        // console.log(getResult(100, 10, "-"));
+        console.log(getResult(100, 10, "-"));
 
 
 
-        // function isCharPresent(str, chr){
-        // for (let i = 0; i < str.length; i += 1){
-        //     if (str[i] == chr){
-        //         return true;
-        //     }
-        // }
-        // return false;
-        // }
+        function isCharPresent(str, chr){
+        for (let i = 0; i < str.length; i += 1){
+            if (str[i] == chr){
+                return true;
+            }
+        }
+        return false;
+        }
 
-        // console.log(isCharPresent("Hello,", ","));
+        console.log(isCharPresent("Hello,", ","));
 
 
-        // function charIndexOf(str, chr){
-        // for (let i = 0; i < str.length; i += 1){
-        //     if (str[i] == chr){
-        //         return i;
-        //     }
-        // }
-        // return -1;
-        // }
+        function charIndexOf(str, chr){
+        for (let i = 0; i < str.length; i += 1){
+            if (str[i] == chr){
+                return i;
+            }
+        }
+        return -1;
+        }
                 
-        // console.log(charIndexOf("Hello", ","));
+        console.log(charIndexOf("Hello", ","));
 
 
 
@@ -88,6 +84,4 @@
     </script>
 </body>
 </html>
-
-
 
